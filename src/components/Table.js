@@ -1,6 +1,6 @@
 import { useSelector } from "react-redux";
 import Avatar from "react-avatar";
-import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
+import { Link } from "react-router-dom";
 import { deleteContact } from "../actions";
 import { useDispatch } from "react-redux";
 export default function Table() {

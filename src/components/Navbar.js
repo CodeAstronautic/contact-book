@@ -1,17 +1,16 @@
 import React from "react";
-import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
+import { Route, Link, BrowserRouter, Routes } from "react-router-dom";
 import Table from "./Table";
 import Create from "./create";
 import EditContacts from "./EditFormDialog";
 
 export default function Navbar() {
   return (
-    <Router>
-      <div className="Navbar">
+    <>
+      {/* <div className="Navbar">
         <nav>
           <ul>
             <Link to="/">
-              {" "}
               <li>
                 <img src="https://cdn.shortpixel.ai/client/q_glossy,ret_img/https://digimantralabs.com/wp-content/uploads/2019/04/logo-min.png" />
               </li>
@@ -21,18 +20,18 @@ export default function Navbar() {
             </li>
           </ul>
         </nav>
-        {/* <Switch> */}
-          <Route path="/edit/:id">
-            <EditContacts />
+      </div> */}
+      <BrowserRouter>
+        <Routes>
+
+          <Route path="/edit/:id" element={<EditContacts />}>
           </Route>
-          <Route path="/create">
-            <Create />
+          <Route path="/create" element={<Create />}>
           </Route>
-          <Route path="/">
-            <Table />
+          <Route path="/" element={<Table />}>
           </Route>
-        {/* </Switch> */}
-      </div>
-    </Router>
+        </Routes>
+      </BrowserRouter>
+    </>
   );
 }
