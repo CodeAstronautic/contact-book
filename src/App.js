@@ -1,16 +1,16 @@
-import React, { useState, useEffect } from "react";
-import Navbar from "./components/Navbar.js";
-// import "./styles.css";
-import { Provider } from "react-redux";
-import store from "./store";
-export default function App() {
+import React from 'react';
+// import 'bootstrap/dist/css/bootstrap.min.css';
+import { AddTodo } from './components/AddTodo';
+import { TodoLists } from './components/TodoLists';
+
+const App = () => {
   return (
-    <div>
-      <Provider store={store}>
-        <div className="App">
-          <Navbar />
-        </div>
-      </Provider>
+    <div className="container p-4 mt-2">
+      <h2>Todo Application</h2>
+      <AddTodo />
+      <TodoLists />
     </div>
   );
 }
+
+export default App;
