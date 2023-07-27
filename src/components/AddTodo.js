@@ -78,12 +78,12 @@ export const AddTodo = () => {
           </div>
 
           <div className="col-xl-3">
-            <label className="sr-only">Description</label>
+            <label className="sr-only">Contact</label>
             <input
               type="text"
               name="description"
               className="form-control mb-2 mr-sm-3"
-              placeholder="Description"
+              placeholder="Contact"
               defaultValue={value?.description}
               onChange={(e) => changeEvent(e)}
             />

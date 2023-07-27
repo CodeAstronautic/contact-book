@@ -90,7 +90,7 @@ export const TodoLists = () => {
               />
             </th>
             <th width="30%">Name</th>
-            <th width="42%">Description</th>
+            <th width="42%">Contact</th>
             <th width="8%">Status</th>
             <th width="20%">Action</th>
           </tr>

@@ -6,7 +6,7 @@ import { TodoLists } from './components/TodoLists';
 const App = () => {
   return (
     <div className="container p-4 mt-2">
-      <h2>Todo Application</h2>
+      <h2>Contact Add</h2>
       <AddTodo />
       <TodoLists />
     </div>
