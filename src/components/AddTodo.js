@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { addNewTodo, updateTodo } from "../redux/action";
+import Button from "./Button"
 
 export const AddTodo = () => {
   const [value, setValue] = useState({});
@@ -37,7 +38,7 @@ export const AddTodo = () => {
     else {
       dispatch(addNewTodo(value));
     }
-    setValue({title: '', description: ''});
+    setValue({ title: '', description: '' });
     document.getElementById("todoForm").reset();
   };
 
@@ -61,16 +62,17 @@ export const AddTodo = () => {
   };
 
   return (
-    <div className="container my-4 py-1 border">
+    <div className="container my-4 py-1 border text-center">
       <form className="mt-3 mb-2" id="todoForm" onSubmit={onSubmit}>
         <div className="row">
           <div className="col-xl-3">
-            <label className="sr-only">Name</label>
+            <label className="">Name :-</label>
             <input
               type="text"
               name="title"
-              className="form-control mb-2 mr-sm-3"
-              placeholder="Todo Title"
+              className="    w-1/4    shadow appearance-none border rounded-xl  py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="username
+              "
+              placeholder="Name"
               defaultValue={value?.title}
               onChange={(e) => changeEvent(e)}
             />
@@ -78,20 +80,23 @@ export const AddTodo = () => {
           </div>
 
           <div className="col-xl-3">
-            <label className="sr-only">Contact</label>
+            <label className="">Contact :-</label>
+
+
             <input
               type="text"
               name="description"
-              className="form-control mb-2 mr-sm-3"
+              className="     w-1/4  rounded-xl      shadow appearance-none border  py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="username
+              "
               placeholder="Contact"
               defaultValue={value?.description}
               onChange={(e) => changeEvent(e)}
             />
-             <span className="text-danger">{error?.description}</span>
+            <span className="text-danger">{error?.description}</span>
           </div>
 
           <div className="col-xl-2">
-            <button className="btn btn-primary mb-2" type="submit"> {isEdit ? 'Update Todo' : 'Create Todo'} </button>
+            <Button className="btn btn-primary mb-2 " type="submit"> {isEdit ? 'Update Todo' : 'Create Todo'} </Button>
           </div>
         </div>
       </form>

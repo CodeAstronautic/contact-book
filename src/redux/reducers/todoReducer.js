@@ -11,22 +11,22 @@ import {
     todos: [
       {
         id: 1,
-        title: "TodoList 1",
-        description: "This is first todo",
+        title: "Phone Number",
+        description: "This is first Phone Number",
         isCompleted: true,
         isPending: false,
       },
       {
         id: 2,
-        title: "TodoList 2",
-        description: "This is second todo",
+        title: "Phone Number 2",
+        description: "This is second Phone Number",
         isCompleted: false,
         isPending: true,
       },
       {
         id: 3,
-        title: "TodoList 3",
-        description: "This is third todo",
+        title: "Phone Number 3",
+        description: "This is third Phone Number",
         isCompleted: false,
         isPending: true,
       },
