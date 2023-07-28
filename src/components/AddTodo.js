@@ -62,15 +62,22 @@ export const AddTodo = () => {
   };
 
   return (
-    <div className="container my-4 py-1 border text-center">
+
+
+
+    <div className="container my-4 h-96 m-auto py-1 w-96 border text-center bg-white shadow-md border border-gray-200 rounded-lg  p-4 sm:p-6 lg:p-8 dark:bg-gray-800 dark:border-gray-700">
+
+
       <form className="mt-3 mb-2" id="todoForm" onSubmit={onSubmit}>
         <div className="row">
-          <div className="col-xl-3">
-            <label className="">Name :-</label>
+          <div className="">
+            <div class="text-lg ml-3 mb-5">
+              <label for="remember" className="font-medium text-gray-900 dark:text-gray-300">Name</label>
+            </div>
             <input
               type="text"
               name="title"
-              className="    w-1/4    shadow appearance-none border rounded-xl  py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="username
+              className="   w-[21rem] mb-5  shadow appearance-none border rounded-xl  py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="username
               "
               placeholder="Name"
               defaultValue={value?.title}
@@ -80,13 +87,14 @@ export const AddTodo = () => {
           </div>
 
           <div className="col-xl-3">
-            <label className="">Contact :-</label>
-
+            <div class="text-lg ml-3 mb-5">
+              <label for="remember" className="font-medium text-gray-900 dark:text-gray-300">Phone Number</label>
+            </div>
 
             <input
               type="text"
               name="description"
-              className="     w-1/4  rounded-xl      shadow appearance-none border  py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="username
+              className="     w-[21rem]  rounded-xl mb-5     shadow appearance-none border  py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="username
               "
               placeholder="Contact"
               defaultValue={value?.description}
@@ -96,7 +104,7 @@ export const AddTodo = () => {
           </div>
 
           <div className="col-xl-2">
-            <Button className="btn btn-primary mb-2 " type="submit"> {isEdit ? 'Update Todo' : 'Create Todo'} </Button>
+            <Button className="w-full text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800" type="submit"> {isEdit ? 'Update Todo' : 'Create Todo'} </Button>
           </div>
         </div>
       </form>
